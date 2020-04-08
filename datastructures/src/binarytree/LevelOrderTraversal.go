@@ -8,9 +8,7 @@ func (root *BinaryTreeNode) levelOrderTraversalOfBinaryTree() {
 
 	for len(queue) != 0 {
 		node := queue[0]
-		//fmt.Println(queue)
 		queue = queue[1:len(queue)]
-		//fmt.Println(queue)
 		visited = append(visited, node)
 		if node.Left != nil {
 			queue = append(queue, node.Left)
