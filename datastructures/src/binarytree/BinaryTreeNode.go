@@ -5,9 +5,3 @@ type BinaryTreeNode struct {
 	Left  *BinaryTreeNode
 	Right *BinaryTreeNode
 }
-
-type Queue struct {
-	count int
-	Head  *BinaryTreeNode
-	Tail  *BinaryTreeNode
-}
