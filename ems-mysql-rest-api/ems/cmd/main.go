@@ -9,7 +9,6 @@ import (
 )
 
 func main() {
-
 	r := mux.NewRouter()
 	routes.RegisterEmployeeRoutes(r)
 	http.Handle("/", r)

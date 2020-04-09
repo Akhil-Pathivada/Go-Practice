@@ -13,7 +13,6 @@ import (
 
 // Creating a new Employee record ...
 func CreateEmployee(w http.ResponseWriter, r *http.Request) {
-
 	newEmployee := &model.Employee{}
 	util.ParseBody(r, newEmployee)
 	b := newEmployee.CreateEmployee()
@@ -25,7 +24,6 @@ func CreateEmployee(w http.ResponseWriter, r *http.Request) {
 
 // Getting all Employee records ...
 func GetAllEmployees(w http.ResponseWriter, r *http.Request) {
-
 	employees := model.GetEmployees()
 	res, _ := json.Marshal(employees)
 	w.Header().Set("Content-Type", "pkglication/json")
@@ -35,7 +33,6 @@ func GetAllEmployees(w http.ResponseWriter, r *http.Request) {
 
 // Getting an Employee record based on Employee Id ...
 func GetEmployeeByID(w http.ResponseWriter, r *http.Request) {
-
 	vars := mux.Vars(r)
 	employeeID := vars["employeeId"]
 	ID, err := strconv.ParseInt(employeeID, 0, 0)
@@ -52,7 +49,6 @@ func GetEmployeeByID(w http.ResponseWriter, r *http.Request) {
 
 // Deleting an Employee record based on Employee Id ...
 func DeleteEmployeeByID(w http.ResponseWriter, r *http.Request) {
-
 	vars := mux.Vars(r)
 	employeeID := vars["employeeId"]
 	ID, err := strconv.ParseInt(employeeID, 0, 0)
@@ -69,7 +65,6 @@ func DeleteEmployeeByID(w http.ResponseWriter, r *http.Request) {
 
 // Updating an Employee record based on Employee Id ...
 func UpdateEmployeeByID(w http.ResponseWriter, r *http.Request) {
-
 	var updateEmployee = &model.Employee{}
 	util.ParseBody(r, updateEmployee)
 	vars := mux.Vars(r)
