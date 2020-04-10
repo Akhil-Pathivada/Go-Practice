@@ -5,7 +5,7 @@ import (
 	"log"
 )
 
-func swapHeapElements(aptr *int, bptr *int) {
+func swapHeapArrayElements(aptr *int, bptr *int) {
 	temp := *aptr
 	*aptr = *bptr
 	*bptr = temp
@@ -23,7 +23,7 @@ func minHeapify(heapArray []int, size int, index int) {
 		smallest = right
 	}
 	if smallest != index {
-		swapHeapElements(&heapArray[index], &heapArray[smallest])
+		swapHeapArrayElements(&heapArray[index], &heapArray[smallest])
 		minHeapify(heapArray, size, smallest)
 	}
 }

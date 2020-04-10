@@ -9,7 +9,7 @@ func decreaseKey(heapArray []int, index int, key int) {
 	heapArray[index] = key
 
 	for index >= 0 && heapArray[(index-1)/2] > heapArray[index] {
-		swapHeapElements(&heapArray[index], &heapArray[(index-1)/2])
+		swapHeapArrayElements(&heapArray[index], &heapArray[(index-1)/2])
 		index = (index - 1) / 2
 	}
 }
