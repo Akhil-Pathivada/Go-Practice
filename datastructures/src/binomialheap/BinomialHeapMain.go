@@ -26,7 +26,6 @@ func BinomialHeapMain() {
 				for i := 0; i < len(elements); i++ {
 					binomialHeap.Insert(elements[i])
 				}
-
 			}
 		case 2:
 			{
