@@ -8,7 +8,8 @@ type BinomialHeapNode struct {
 	Sibling *BinomialHeapNode // points to right side sibling
 }
 
-type LinkedList struct {
-	Head *BinomialHeapNode
-	Size int
+
+type LinkedList struct { // List to maintain Heads of all Binomial Trees
+	Head *BinomialHeapNode // points to Head of Binomial Heap
+	Size int // number of elements in entire Heap
 }
